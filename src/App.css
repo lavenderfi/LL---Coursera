@@ -2,37 +2,75 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.nav {
+  background-color: #FBDABB;
+  padding:10px
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nav ul {
+  list-style: none;
+  display:flex;
+  flex-direction: row;
+  float:right;
+}
+.nav a {
+  margin:10px;
+  color:black;
+  text-decoration: none;
+  font-family: 'Markazi Text', serif;
+  font-size:20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav a:hover {
+  text-decoration: underline;
+}
+.footer a:hover {
+  text-decoration: underline;
+}
+.footer {
+  border-top: 1px solid black;
+  display: flex;
+}
+.footer ul {
+  list-style: none;
+  float:right;
+}
+.footer a {
+  margin:10px;
+  color:black;
+  text-decoration: none;
+  font-family: 'Markazi Text', serif;
+  font-size:20px;
+}
+.footer .links {
+  display: flex;
+  flex-direction: row;
+}
+.footer .footer-items {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+h1 {
+  font-family: 'Markazi Text', serif;
+  font-size:20px;
 }
 
-.App-link {
-  color: #61dafb;
-}
+@media only screen and (max-width: 600px) {
+  .nav {
+    display: flex;
+    flex-direction: column;
+  }
+  .nav ul {
+    flex-direction: column;
+  }
+  .footer .links {
+    display:flex;
+    flex-direction: column;
+  }
+  .footer {
+    display:flex;
+    flex-direction: column;
+  }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
