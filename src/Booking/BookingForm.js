@@ -40,6 +40,7 @@ export const Form = ({updateTimes, initializeTimes }) => {
           onChange={handleChange}
           value={info.date}
           name="date"
+          // validation for date is the only one needed
           required
         />
         <label htmlFor="time">Time</label>
