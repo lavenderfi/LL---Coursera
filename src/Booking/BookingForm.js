@@ -9,7 +9,7 @@ export const Form = ({updateTimes, initializeTimes }) => {
     size: 1,
     occasion: 'other',
   });
-  // let [valid,setValid] = useState(true)
+
   const [state, dispatch] = useReducer(updateTimes, initializeTimes());
 let navigate = useNavigate()
   function handleChange(e) {
@@ -18,9 +18,7 @@ let navigate = useNavigate()
       [e.target.name]: e.target.value,
     });
     if ([e.target.name] === 'date') {
-        // if(isBeforeToday(e.target.value)){
-        //     setValid(false)
-        // }
+
       dispatch(e.target.value);
       console.log(e.target.value)  
     }
@@ -32,13 +30,7 @@ let navigate = useNavigate()
         navigate('/confirm')
     }
   }
-  // function isBeforeToday(date) {
-  //   const today = new Date();
-  
-  //   today.setHours(0, 0, 0, 0);
-  
-  //   return date < today;
-  // }
+
 
   return (
     <div className="form">
