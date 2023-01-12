@@ -120,6 +120,37 @@
 .abouttitle {
     background-color: #F4CE14;
 }
+
+.reserve{
+  margin:4px;
+  border:3px solid #F4CE14;
+  border-radius: 12px;
+  min-height: 260px;
+}
+.form{
+
+}
+.form form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.form input{
+  margin:3px;
+  border-radius: 16px;
+  text-align: center;
+}
+.form select {
+  margin:3px;
+  border-radius: 16px; 
+  text-align: center;
+}
+.form .button {
+width:70px;
+padding-bottom: 20px !important;
+}
   .nav {
     margin-left: 0px;
     background-color: #FBDABB;

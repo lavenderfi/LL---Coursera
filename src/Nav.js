@@ -12,16 +12,16 @@ function Nav () {
                     <a href='#about'>About</a>
                 </li>
                 <li>
-                    <a href='#menu'>Menu</a>
+                    <a href='/menu'>Menu</a>
                 </li>
                 <li>
-                    <a href='#reserve'>Reservations</a>
+                    <a href='/reserve'>Reservations</a>
                 </li>
                 <li>
-                    <a href='#order'>Order Online</a>
+                    <a href='/order'>Order Online</a>
                 </li>
                 <li>
-                    <a href='#login'>Login</a>
+                    <a href='/login'>Login</a>
                 </li>
             </ul>
         </div>
