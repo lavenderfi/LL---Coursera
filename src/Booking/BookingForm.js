@@ -1,4 +1,6 @@
 import { useState, useReducer } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { submitAPI } from '../temp';
 
 export const Form = ({updateTimes, initializeTimes }) => {
   let [info, setInfo] = useState({
@@ -7,6 +9,7 @@ export const Form = ({updateTimes, initializeTimes }) => {
     size: 1,
     occasion: 'other',
   });
+  const navigate = useNavigate()
 
   const [state, dispatch] = useReducer(updateTimes, initializeTimes());
 
@@ -23,11 +26,13 @@ export const Form = ({updateTimes, initializeTimes }) => {
 
   function handleSubmit(e) {
     e.preventDefault();
+    if(submitAPI(info)){
+        navigate('/confirm')
+    }
   }
 
   return (
     <div className="form">
-      {console.log(state)}
       <form onSubmit={handleSubmit}>
         <label htmlFor="date">Date</label>
         <input
@@ -35,6 +40,7 @@ export const Form = ({updateTimes, initializeTimes }) => {
           onChange={handleChange}
           value={info.date}
           name="date"
+          required
         />
         <label htmlFor="time">Time</label>
         <select onChange={handleChange} value={info.time} name="time">
@@ -59,7 +65,7 @@ export const Form = ({updateTimes, initializeTimes }) => {
           <option>Anniversary</option>
           <option>Other</option>
         </select>
-        <input type="submit" value="Submit" className="button" />
+        <input type="submit" value="Submit" className="button" aria-label='button' />
       </form>
     </div>
   );

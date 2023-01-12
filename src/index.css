@@ -12,7 +12,7 @@
   width:100%;
   background-color: #495E57;
   color:#EDEFEE;
-  min-height: 350px;
+  min-height: 300px;
   align-items: center;
   }
 
@@ -49,11 +49,15 @@
     justify-content: space-around;
     align-items: center;
   }
+  .specials {
+    width:90%
+  }
 .specialfood ul {
     display: flex;
     width:100%;
-    justify-content: space-evenly;
+    justify-content: space-between;
     list-style: none;
+    max-width: 100%;
 }
 .specialfood li {
     width:40%;
@@ -127,9 +131,7 @@
   border-radius: 12px;
   min-height: 260px;
 }
-.form{
 
-}
 .form form {
   display: flex;
   flex-direction: column;
@@ -140,16 +142,45 @@
 .form input{
   margin:3px;
   border-radius: 16px;
+  width: 150px;
+  height:30px;
+  font-size: 20px;
   text-align: center;
+  
 }
 .form select {
   margin:3px;
   border-radius: 16px; 
   text-align: center;
+  width: 150px;
+  height:30px;
+  font-size: 20px;
+}
+.form label {
+  font-size: 20px;
+  font-weight: 600;
 }
 .form .button {
-width:70px;
-padding-bottom: 20px !important;
+width:80px;
+padding-bottom: 30px !important;
+margin-top: 10px;
+cursor: pointer;
+}
+
+.confirm {
+  display: flex;
+  margin:auto;
+  background-color: #EE9972;
+  border-radius: 50%;
+  width:200px;
+  height:200px;
+  color:#EDEFEE;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.confirm h1 {
+  align-self: center;
 }
   .nav {
     margin-left: 0px;
@@ -233,9 +264,13 @@ padding-bottom: 20px !important;
   .specials li {
     padding-bottom: 10px;
     margin-bottom: 5px;
+    width:70%
   }
   .home {
     flex-direction: column;
+  }
+  .home .info {
+    margin-bottom: 10px;
   }
   .reviews ul {
     flex-direction: column;
