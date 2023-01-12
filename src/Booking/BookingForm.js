@@ -9,16 +9,18 @@ export const Form = ({updateTimes, initializeTimes }) => {
     size: 1,
     occasion: 'other',
   });
-  const navigate = useNavigate()
-
+  // let [valid,setValid] = useState(true)
   const [state, dispatch] = useReducer(updateTimes, initializeTimes());
-
+let navigate = useNavigate()
   function handleChange(e) {
     setInfo({
       ...info,
       [e.target.name]: e.target.value,
     });
     if ([e.target.name] === 'date') {
+        // if(isBeforeToday(e.target.value)){
+        //     setValid(false)
+        // }
       dispatch(e.target.value);
       console.log(e.target.value)  
     }
@@ -30,6 +32,13 @@ export const Form = ({updateTimes, initializeTimes }) => {
         navigate('/confirm')
     }
   }
+  // function isBeforeToday(date) {
+  //   const today = new Date();
+  
+  //   today.setHours(0, 0, 0, 0);
+  
+  //   return date < today;
+  // }
 
   return (
     <div className="form">
@@ -42,6 +51,7 @@ export const Form = ({updateTimes, initializeTimes }) => {
           name="date"
           // validation for date is the only one needed
           required
+
         />
         <label htmlFor="time">Time</label>
         <select onChange={handleChange} value={info.time} name="time">

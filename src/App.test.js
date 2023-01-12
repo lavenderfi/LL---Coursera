@@ -1,15 +1,15 @@
 import { render, screen,fireEvent } from "@testing-library/react";
-import BookingForm from './Booking/BookingForm';
+import {Form} from './Booking/BookingForm'
 
 test('Renders the BookingForm heading', () => {
-    render(<BookingForm />);
+    render(<Form />);
     const headingElement = screen.getByText("Submit");
     expect(headingElement).toBeInTheDocument();
 })
 
 test('Testing some elements from the booking form, check if empty date doesnt submit', () => {
     const handleSubmit = jest.fn();
-    render(<BookingForm onSubmit={handleSubmit} />);
+    render(<Form onSubmit={handleSubmit} />);
     
     
     const submitButton = screen.getByRole("button");
